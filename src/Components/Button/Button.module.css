@@ -1,0 +1,13 @@
+.button {
+  border-radius: 12px;
+  background: #552583;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.maindiv {
+  display: flex;
+}

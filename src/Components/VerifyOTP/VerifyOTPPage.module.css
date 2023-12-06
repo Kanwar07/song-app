@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  align-items: stretch;
+}
+
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  color: #552583;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.para {
+  color: #101920;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.phone {
+  display: flex;
+  width: 100% !important;
+}
+
+.button {
+  border: none;
+  line-height: normal;
+  background-color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.otp {
+  display: flex;
+  justify-content: space-evenly;
+}
