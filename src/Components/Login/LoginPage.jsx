@@ -28,7 +28,7 @@ function LoginPage() {
           value={number}
           onChange={handlechange}
         />
-        <Link to="/verify">
+        <Link to="/verify" style={{ textDecoration: "none" }}>
           <ButtonSignIn />
         </Link>
       </Stack>

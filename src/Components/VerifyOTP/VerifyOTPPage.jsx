@@ -28,15 +28,19 @@ function VerifyOTPPage() {
           renderSeparator={<span>-</span>}
           renderInput={(props) => <input {...props} />}
         />
-        <Link to="/songs">
+        <Link to="/songs" style={{ textDecoration: "none" }}>
           <ButtonOTP />
         </Link>
 
         <button className={verifyotppagestyle.button}>
-          <Link to="/verify">Resend OTP</Link>
+          <Link to="/verify" style={{ textDecoration: "none" }}>
+            Resend OTP
+          </Link>
         </button>
         <button className={verifyotppagestyle.button}>
-          <Link to="/">Use another number</Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            Use another number
+          </Link>
         </button>
       </Stack>
     </>
