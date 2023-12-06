@@ -11,10 +11,11 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import Pagination from "../Pagination/Pagination";
 import NavBar from "../NavBar/NavBar";
 
 function Songs() {
-  const { allsongs, handleaddsongsclick } = useContext(Alldata);
+  const { handleaddsongsclick, currentsong } = useContext(Alldata);
   return (
     <Stack direction="row">
       <SideNav />
@@ -33,9 +34,10 @@ function Songs() {
             </TableHead>
           </Table>
         </TableContainer>
-        {allsongs.map((song) => {
+        {currentsong.map((song) => {
           return <SongCard key={song.id} song={song} />;
         })}
+        <Pagination />
       </Stack>
     </Stack>
   );

@@ -8,17 +8,30 @@ function Context({ children }) {
   const [otp, setOtp] = useState("5678");
   const [allsongs, setallsongs] = useState([]);
   const [addsongs, setaddsongs] = useState(false);
+  const [currentPage, setcurrentPage] = useState(1);
+  const [songsPerPage] = useState(4);
 
   useEffect(() => {
     const getdata = () => {
       setallsongs(data.tracks);
     };
     getdata();
-  }, [allsongs]);
+  }, []);
 
   const handleaddsongsclick = () => {
     setaddsongs((addsongs) => !addsongs);
   };
+
+  const indexOfLastSong = currentPage * songsPerPage;
+  const indexOfFirstSong = indexOfLastSong - songsPerPage;
+  const currentsong = allsongs.slice(indexOfFirstSong, indexOfLastSong);
+
+  const pagenumbers = [];
+
+  for (let i = 1; i <= Math.ceil(allsongs.length / songsPerPage); i++) {
+    pagenumbers.push(i);
+    console.log(i);
+  }
 
   return (
     <Alldata.Provider
@@ -32,6 +45,11 @@ function Context({ children }) {
         addsongs,
         setaddsongs,
         handleaddsongsclick,
+        currentsong,
+        songsPerPage,
+        currentPage,
+        setcurrentPage,
+        pagenumbers,
       }}
     >
       {children}
